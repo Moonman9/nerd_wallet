@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Home from '../pages/Home/Home';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
+import Forum from '../pages/Forum';
+import Product from '../pages/Product/Product';
 
 export default function StoreContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -14,6 +16,12 @@ export default function StoreContainer() {
     }
     if (currentPage === 'About') {
       return <About />;
+    }
+    if (currentPage === 'Forum') {
+      return <Forum />;
+    }
+    if (currentPage === 'Product') {
+      return <Product />;
     }
     return <Contact />;
   };
