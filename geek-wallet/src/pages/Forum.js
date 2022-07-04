@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Home() {
+export default function Forum() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Forum Page</h1>
       <p>
-            Hi there.
+            Hi.
       </p>
     </div>
   );
