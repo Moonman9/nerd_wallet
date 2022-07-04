@@ -5,7 +5,7 @@ export default function Forum() {
     <div>
       <h1>Forum Page</h1>
       <p>
-            Hi there.
+            Hi.
       </p>
     </div>
   );

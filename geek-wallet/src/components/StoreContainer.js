@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Forum from '../pages/Forum';
 import Product from '../pages/Product/Product';
+import Cart from '../cart-comp/Cart/index';
 
 export default function StoreContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -22,6 +23,9 @@ export default function StoreContainer() {
     }
     if (currentPage === 'Product') {
       return <Product />;
+    }
+    if (currentPage === 'Cart') {
+        return <Cart />;
     }
     return <Contact />;
   };
