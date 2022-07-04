@@ -1,11 +1,10 @@
 const db = require('./connection');
 const { Geek, Artifact, Class } = require('../models');
-const { Category } = require('../../../../../week22/homework/shop-shop/server/models');
 
 db.once('open', async () => {
     await Class.deleteMany();
 
-    const classes = await Category.insertMany([
+    const classes = await Class.insertMany([
         { name: 'Cards' },
         { name: 'Media' },
         { name: 'Video Games' },
@@ -79,6 +78,18 @@ db.once('open', async () => {
       username: 'Geekster',
       email: 'geektest@testmail.com',
       password: 'password12345',
+    });
+
+    await User.create({
+      fullname: 'Bill Nye',
+      username: 'Dr.Gangsta',
+      email: 'billnye@science.com',
+      password: 'billspassword',
+      orders: [
+        {
+          artifacts: [artifacts[0]._id, artifacts[3]._id]
+        }
+      ]
     });
   
     process.exit()

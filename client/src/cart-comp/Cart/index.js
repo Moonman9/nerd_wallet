@@ -1,5 +1,5 @@
 import React from 'react';
-import CartItem from '../Cart/Cart/CartItem/index';
+import CartItem from './Cart/CartItem/index';
 import Auth from '../../utils/auth';
 // import './Cart/style.css';
 

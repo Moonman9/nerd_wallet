@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
+const Purchased = require('./Purchased');
 
 const geekSchema = new Schema({
     fullname: {
@@ -23,7 +24,8 @@ const geekSchema = new Schema({
         type: String,
         required: true,
         minlength: 5
-    }
+    },
+    orders: [Purchased.schema]
 });
 
 geekSchema.pre('save', async function(next) {

@@ -11,7 +11,7 @@ const artifactSchema = new Schema({
     description: {
         type: String,
         require: true,
-        maxlength: 120,
+        maxlength: 1500,
     },
     image: {
         type: String
