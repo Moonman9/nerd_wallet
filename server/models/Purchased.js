@@ -3,7 +3,7 @@ const { model } = require('../config/connection');
 
 const { Schema } = mongoose;
 
-const purchaseSchema = new Schema({
+const purchasedSchema = new Schema({
     artifacts: [
         {
             type: Schema.Types.ObjectId,
