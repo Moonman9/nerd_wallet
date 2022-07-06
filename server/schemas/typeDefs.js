@@ -10,7 +10,7 @@ const typeDefs = gql`
     }
     type Purchased {
         _id: ID
-        artifacts: [Artifacts]
+        artifacts: [Artifact]
         purchaseDate: String
     }
     type Class {
