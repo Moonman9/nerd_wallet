@@ -4,6 +4,7 @@ import banner from '../../assets/images/geekWalletBannerSmall.png'
 import MainDashboard from "../../components/MainDashboard/MainDashboard";
 import './style.css';
 import Cart from "../../cart-comp/Cart";
+import Footer from "../Footer";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
         </Card>
       </Row>
       <br/>
+      
       <MainDashboard/>
+      <Footer /> 
     </Container>
   );
 }
