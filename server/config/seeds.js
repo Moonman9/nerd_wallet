@@ -73,14 +73,14 @@ db.once('open', async () => {
     ]);
     await Geek.deleteMany();
 
-    await User.create({
+    await Geek.create({
       fullname: 'Geek Smith',
       username: 'Geekster',
       email: 'geektest@testmail.com',
       password: 'password12345',
     });
 
-    await User.create({
+    await Geek.create({
       fullname: 'Bill Nye',
       username: 'Dr.Gangsta',
       email: 'billnye@science.com',
