@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import banner from '../../assets/images/geekWalletBannerSmall.png'
 import MainDashboard from "../../components/MainDashboard/MainDashboard";
-import './style.css';
+import '../Home/style.css';
 import Cart from "../../cart-comp/Cart";
 import Footer from "../Footer";
+// import '../../assets/Contact.css';
 
 export default function Home() {
   return (

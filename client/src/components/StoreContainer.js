@@ -6,6 +6,7 @@ import Contact from '../pages/Contact';
 import Forum from '../pages/Forum';
 import Product from '../pages/Product/Product';
 import Cart from '../cart-comp/Cart/index';
+// import '../assets/Contact.css';
 
 export default function StoreContainer() {
   const [currentPage, setCurrentPage] = useState('Home');

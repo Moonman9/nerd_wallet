@@ -8,7 +8,7 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
-import "./style.css";
+import "../MainDashboard/style.css";
 import placeholder from '../../assets/images/productImg.png'
 
 export default function MainDashboard({ currentPage, handlePageChange }) {
