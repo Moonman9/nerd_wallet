@@ -32,14 +32,14 @@ const resolvers = {
                 $regex: name
               };
             }
-            return await Product.find(params).populate('category');
+            return await Artifact.find(params).populate('category');
         },
         product: async (parent, { _id }) => {
             return await Artifact.findById(_id).populate('category');
         },
         order: async (parent, { _id }, context) => {
             if (context.user) {
-                const user = await User.findById(context.user._id).populate({
+                const user = await Geek.findById(context.user._id).populate({
                     path: 'orders.artifacts',
                     populate: 'category'
                 });
@@ -56,12 +56,12 @@ const resolvers = {
         },
         updateUser: async (parent, args, context) => {
             if (context.user) {
-                return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+                return await Geek.findByIdAndUpdate(context.user._id, args, { new: true });
             }
             throw new AuthenticationError('Not logged in');
         },
         login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+            const user = await Geek.findOne({ email });
             if (!user) {
                 throw new AuthenticationError('Incorrect credentials');
             }
@@ -80,7 +80,7 @@ const resolvers = {
             console.log(context);
             if (context.user) {
                 const order = new Purchased({ artifacts });
-                await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+                await Geek.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
                 return order;
             }
             throw new AuthenticationError('Not logged in');
